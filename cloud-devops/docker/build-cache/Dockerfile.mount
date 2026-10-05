@@ -1,0 +1,6 @@
+# Sonra: yalnız derlemeye giren dosyalar kopyalanır; Go'nun derleme cache'i build'ler arasında saklanır.
+FROM golang:1.26-alpine
+WORKDIR /src
+COPY go.mod ./
+COPY *.go ./
+RUN --mount=type=cache,target=/root/.cache/go-build CGO_ENABLED=0 go build -o /out/app .

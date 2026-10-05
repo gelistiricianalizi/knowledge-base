@@ -1,0 +1,7 @@
+# measure.sh bu dosyayı ölçüm klasörüne .dockerignore adıyla kopyalar.
+.git
+docs
+veri
+*.md
+Dockerfile*
+.dockerignore

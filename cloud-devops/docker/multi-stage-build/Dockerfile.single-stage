@@ -1,0 +1,12 @@
+# Önce: tek aşama. Derleyici, kaynak kod ve build cache son imajda kalır.
+FROM golang:1.26-alpine AS single
+WORKDIR /src
+COPY go.mod main.go ./
+RUN go build -o /app .
+EXPOSE 8080
+CMD ["/app"]
+
+# Karşı örnek: ayrı bir RUN ile silmek imajı küçültmez. Silinen dosyalar alt katmanlarda
+# durmaya devam eder; yeni katman yalnız "silindi" işaretini ekler.
+FROM single AS single-cleanup
+RUN rm -rf /usr/local/go /root/.cache/go-build
