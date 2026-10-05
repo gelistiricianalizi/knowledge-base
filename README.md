@@ -49,4 +49,4 @@ Sorular ve fikirler için Discussions sekmesini kullanabilirsiniz.
 
 ---
 
-[Geliştirici Analizi](https://github.com/Gelistirici-Analizi) · Geliştiriciler için teknoloji ve mühendislik.
+[Geliştirici Analizi](https://github.com/gelistiricianalizi) · Geliştiriciler için teknoloji ve mühendislik.
